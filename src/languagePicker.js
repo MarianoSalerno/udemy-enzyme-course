@@ -8,7 +8,7 @@ function LanguagePicker({ setLanguage }) {
     <span 
       data-test='language-icon'
       key={language.code}
-      onClick={setLanguage(language.code)}
+      onClick={() => setLanguage(language.code)}
     >
       {language.symbol}
     </span>
