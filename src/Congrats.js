@@ -5,6 +5,7 @@ import stringsModule from './helpers/strings'
 
 const Congrats = (props) => {
   const language = React.useContext(languageContext)
+  
   if (props.success) {
     return (
       <div className='alert alert-success' data-test='component-congrats'>
