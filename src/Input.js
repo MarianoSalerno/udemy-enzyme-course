@@ -9,7 +9,8 @@ function Input({ secretWord }) {
   const language = React.useContext(languageContext)
   const [success, setSuccess] = successContext.useSuccess()
 
-  if (success) {return null}
+  if (success) { return null }
+  
   return (
     <div data-test='component-input'>
       <form className="form-inline">
@@ -25,6 +26,7 @@ function Input({ secretWord }) {
           className="btn btn-primary mb-2"
           onClick={(evt) => {
             evt.preventDefault()
+            setSuccess(currentGuess === secretWord)
             setCurrentGuess('')
           }}>
           {stringsModule.getStringByLanguage(language, 'submit')}
