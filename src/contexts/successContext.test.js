@@ -10,7 +10,7 @@ const FunctionalComponent = () => {
 test('useSuccess throws error when not wrapped in a SuccessProvider', () => {
   expect(() => {
     shallow(<FunctionalComponent />)
-  }).toThrow('useSuccess does not exist')
+  }).toThrow('successContext does not exist')
 })
 
 test('useSuccess does not throw error when wrapped in a SuccessProvider', () => {
@@ -20,5 +20,5 @@ test('useSuccess does not throw error when wrapped in a SuccessProvider', () => 
         <FunctionalComponent />
       </successContext.SuccessProvider>
     )
-  }).not.toThrow('useSuccess does not exist')
+  }).not.toThrow('successContext does not exist')
 })

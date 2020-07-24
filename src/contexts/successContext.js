@@ -6,7 +6,7 @@ const useSuccess = () => {
   const context = React.useContext(successContext)
   
   if (!context) {
-    throw new Error('useSuccess does not exist')
+    throw new Error('successContext does not exist')
   }
 
   return context
