@@ -30,7 +30,7 @@ function Input({ secretWord }) {
           onClick={(evt) => {
             evt.preventDefault()
             const letterMatchCount = getLetterMatchCount(currentGuess, secretWord)
-            const newGuessedWords = [...guessedWords, {guessedWords: currentGuess, letterMatchCount: letterMatchCount }]
+            const newGuessedWords = [...guessedWords, {guessedWord: currentGuess, letterMatchCount: letterMatchCount }]
             setGuessedWords(newGuessedWords)
 
             setSuccess(currentGuess === secretWord)
